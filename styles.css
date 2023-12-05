@@ -1,0 +1,118 @@
+body {
+    background-color: #b179df;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.title {
+    color: #000000;
+}
+
+.rotating-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.rotating-images img {
+    max-width: 200px;
+    height: auto;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    margin: 0 10px;
+    transform-origin: center;
+    animation: rotateImages 5s linear infinite;
+}
+
+@keyframes rotateImages {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Flashing "Click here!" background */
+body::before {
+    content: "click here";
+    content-visibility: 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #ff0000, #ff00ff, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);
+    background-size: 600% 600%;
+    animation: flashing 5s infinite;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+@keyframes flashing {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #00ffff;
+    margin: 0;
+    padding: 0;
+    color: #ff00ff;
+}
+
+.header {
+    background-color: #9900cc;
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #000000;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+
+.content p {
+    font-size: 18px;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
